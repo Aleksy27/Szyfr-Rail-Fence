@@ -1,1 +1,1 @@
-# Pozdro
+# Zadanie zaliczeniowe z informatyki
