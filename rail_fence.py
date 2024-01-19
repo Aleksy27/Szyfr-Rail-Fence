@@ -18,14 +18,14 @@ def encrypt(input_text, encryption_key, fill_char='\n'):
 
         current_row, current_col = current_row + direction, current_col + 1
 
-    encrypted_text = ""
+    rail_fence_text = ""
 
     for i in range(num_rows):
         for j in range(num_cols):
             if rail_fence_cipher[i][j] != fill_char:
-                encrypted_text += rail_fence_cipher[i][j]
+                rail_fence_text += rail_fence_cipher[i][j]
 
-    return encrypted_text
+    return rail_fence_text
 
 
 def decrypt(cipher_text, key):
@@ -55,7 +55,7 @@ def decrypt(cipher_text, key):
                 rail_fence_cipher[i][j] = cipher_text[index]
                 index += 1
 
-    plain_text = ""
+    text = ""
     current_row, current_col = 0, 0
     direction = -1
 
@@ -65,12 +65,12 @@ def decrypt(cipher_text, key):
         elif current_row == num_rows - 1:
             direction = -direction
 
-        plain_text += rail_fence_cipher[current_row][current_col]
+        text += rail_fence_cipher[current_row][current_col]
         current_row, current_col = current_row + direction, current_col + 1
 
-    return plain_text
+    return text
 
-enc_text = encrypt("HELLO WORLD", 3)
-dec_text = decrypt(enc_text, 3)
-print("Encrypted:", enc_text)
-print("Decrypted:", dec_text)
+# enc_text = encrypt("milego sprawdzania", 3)
+# dec_text = decrypt(enc_text, 3)
+# print("Encrypted:", enc_text)
+# print("Decrypted:", dec_text)

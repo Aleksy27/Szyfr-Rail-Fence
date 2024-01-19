@@ -8,17 +8,19 @@
   </head>
   <body>
     <h1>Rail Fence</h1>
-    <form>
-      <input type="text" placeholder="Wprowadź klucz" /><input
+    <form action="/enc" method="post">
+      <input type="text" name="key" placeholder="Enter Key" /><input
         type="text"
+        name="text"
         placeholder="Paste your text to encrypt"
-      /><button type="submit">Potwierdź</button>
+      /><button type="submit">Submit</button>
     </form>
-    <form>
-      <input type="text" placeholder="Wprowadź klucz" /><input
+    <form action="/dec" method="post">
+      <input type="text" name="key" placeholder="Enter Key" /><input
         type="text"
+        name="rail_fence_text"
         placeholder="Paste your text to decrypt"
-      /><button type="submit">Potwierdź</button>
+      /><button type="submit">Submit</button>
     </form>
   </body>
 </html>
