@@ -1,1 +1,2 @@
-# Zadanie zaliczeniowe z informatyki
+# Rail Fence
+Zadanie zaliczeniowe z informatyki
